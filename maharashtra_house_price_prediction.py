@@ -2,7 +2,7 @@
 """
 Created on Tue Nov  1 12:33:30 2022
 
-@author: Mehul
+@author: Swapnil
 """
 
 import streamlit as st
@@ -85,21 +85,37 @@ def load_lottieurl(url: str):
                 return None
         return r.json()
 
+st.set_page_config(page_title="Swapnil's House Price Predictor", page_icon="🏠", layout="centered")
 animation = load_lottiefiles("animation.json")
-st_lottie(animation, key="anim", quality="low", loop=True, height=200)
+st_lottie(animation, key="anim", quality="low", loop=True, height=220)
 
 ############
 
-
-
-html = """
-    <div style="background:#025246 ;padding:15px">
-    <h1 style="color:white;text-align:center;"> Maharashtra's House Price Prediction</h1>
-    </div>
+st.markdown(
     """
-st.markdown('https://in.linkedin.com/in/mehul-ligade-a04332240')
-st.markdown(html, unsafe_allow_html = True )
+    <div style="background:#0f4c75;padding:20px;border-radius:18px;">
+        <h1 style="color:#f5f6fa;text-align:center;margin:0;">Swapnil's Maharashtra House Price Predictor</h1>
+        <p style="color:#dbe9f4;text-align:center;margin:8px 0 0;font-size:16px;">
+            Clean home price estimates for Maharashtra neighborhoods.
+        </p>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
 
+st.write("### Quick Start")
+st.write(
+    "- Enter the carpet area in sqft\n"
+    "- Choose number of BHK\n"
+    "- Select a locality\n"
+    "- Click **Predict House Price** to see the estimate"
+)
+
+st.sidebar.header("About")
+st.sidebar.write("Swapnil's house price prediction app for Maharashtra.")
+st.sidebar.markdown(
+    "[LinkedIn | linkedin.com/in/swapnil-gaikwad1](https://www.linkedin.com/in/swapnil-gaikwad1)"
+)
 
 sqft=st.number_input('Enter carpet area in sqft', 375,1500)
 bhk=st.select_slider('Choose number of BHK', [1,2,3,4,5])
@@ -114,8 +130,9 @@ if st.button("Predict House Price"):
 
 
 html_temp = """
-    <div style="background:#025246 ;padding:2px">
-    <h4 style="color:white;text-align:center;"> Created by Mehul on 31 OCT 2022 </h4>
+    <div style="background:#0f4c75 ;padding:8px;border-radius:12px;">
+    <h4 style="color:white;text-align:center;margin:0;">Created by Swapnil | linkedin.com/in/swapnil-gaikwad1</h4>
     </div>
     """
 st.markdown(html_temp, unsafe_allow_html = True)
+
