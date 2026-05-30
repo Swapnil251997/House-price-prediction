@@ -1,7 +1,7 @@
 
 **Maharashtra's House Price Prediction**
 
-I'd like to share my end-to-end Machine Learning project on predicting house prices in Maharashtra, India. This project was created as part of my learning journey, and I'm excited to share it with you!
+Swapnil's end-to-end Machine Learning project on predicting house prices in Maharashtra, India. This project demonstrates a complete ML pipeline from data collection through deployment using Streamlit.
 
 **Project Goal**
 

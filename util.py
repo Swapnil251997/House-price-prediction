@@ -7,7 +7,8 @@ __locality_name = None
 __data_columns = None
 __model = None
 
-def get_estimated_price(locality_name,sqft,bhk):
+def get_estimated_price(locality_name, sqft, bhk):
+    """Predict house price based on locality, square footage, and BHK."""
     try:
         loc_index = __data_columns.index(locality_name.lower())
     except:
